@@ -43,9 +43,11 @@
                     <p class="lead">This is Part 1.1</p>
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                    <button name="1.1.1" class="btn btn-success btn-block" data-sql="SELECT * "FROM" employees LIMIT 100" onClick="reply_click(this)">1.1</button>
-                    <button name="1.1.2" class="btn btn-success btn-block">1.1</button>
-                    <button name="1.1.3" class="btn btn-success btn-block">1.1</button>
+                    <button name="1.1.1" class="btn btn-success btn-block" data-sql="SELECT * FROM departments LIMIT 100" onClick="reply_click(this)">List all attributes present in the departments relation</button>
+                    <button name="1.1.2" class="btn btn-success btn-block" data-sql="SELECT emp_id,first_name,last_name FROM employees LIMIT 100" onClick="reply_click(this)">List all employee IDs of all past/current employees, their first and last names</button>
+                    <button name="1.1.3" class="btn btn-success btn-block" data-sql="SELECT dept_name FROM departments LIMIT 100" onClick="reply_click(this)">List all department titles present in the database. </button>
+                    <button name="1.1.3" class="btn btn-success btn-block" data-sql="SELECT DISTINCT title FROM titles GROUP BY title LIMIT 100" onClick="reply_click(this)">List all unique job titles found in the database, and order them alphabetically </button>
+                    <button name="1.1.3" class="btn btn-success btn-block" data-sql="SELECT DISTINCT first_name,last_name FROM employees GROUP BY first_name,last_name LIMIT 100" onClick="reply_click(this)">List all past/current employees names ordered alphabetically in ascending order </button>
                 </div>
                 <div class="col-lg-10 order-2 border-success">
                     <textarea id="commands" class="mb-5">TEXT
